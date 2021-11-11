@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="lord-icon-2.0.2.js"></script>
+<lord-icon
+        src="json/2332-carbon-neutral-outline.json"
+        trigger="hover"
+        colors="primary:#08a88a,secondary:#08a88a"
+        style="width:250px;height:250px">
+</lord-icon>
+
+</body>
+<script>
+    $(".table_row_hide tr ").each(function () {
+        var id = $('td', this)[1];
+        var name = $('td', this)[2];
+        var percent = $('td', this)[5];
+        id = $('a ', id);
+        name = $('a ', name);
+        percent = $('label ', percent);
+        var data = "'url' => " + id.html() + " ,";
+        var dataName = "'name' => '" + name.html().trim() + "' ,";
+        var dataPercent = "'percent' => '" + percent.html().trim() + "' ,";
+        var dataNote = "'note' => '' ,";
+        console.log(" array(");
+        console.log(data);
+        console.log(dataName);
+        console.log(dataPercent);
+        console.log(dataNote);
+        console.log(" ),");
+    });
+</script>
+</html>
